@@ -1,0 +1,98 @@
+body {
+    margin:30px;
+    background : lab(75.04% -54.69 19.45 / 0.262);
+    font-family:Arial,sans-serif;
+    text-align :center;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+.bouton-rythme{
+    border-width: 0px;
+    padding: 0px;
+    background-color: red;
+    text-align: center;
+}
+.bouton-sol{
+    border-width: 0px;
+    padding: 0px;
+    background-color: black;
+    text-align: center;
+}
+.espace{
+    margin: 30px;
+}
+div{
+    margin: 0px;
+}
+
+/* --- Ajouts pour le fonctionnement du jeu --- */
+
+button{ cursor:pointer; }
+.bouton-rythme img, .bouton-sol img{
+    height:44px;
+    width:auto;
+    display:block;
+}
+.bouton-rythme:disabled{ cursor:default; }
+
+.row-sync{
+    align-items:center;
+    gap:0x;
+    height:43px;
+}
+.row-cell{
+    position:relative;
+    width:80px;
+    height:43px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0px;
+}
+.cell-img{
+    /*max-width:100%;
+    max-height:100%;*/
+    width:80px;
+    height:43px;
+    display:block;
+}
+.cell-tile-img{ cursor:pointer; }
+.cell-empty-bg{ position:absolute; top:0; left:0; width:80px; height:43px; cursor:pointer; }
+.pi-overlay{
+    position:absolute;
+    /*top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);*/
+    height:43px;
+    width:80px;
+    pointer-events:none;
+}
+.row-cell.selected .cell-empty-bg{
+    outline:3px solid limegreen;
+    border-radius:4px;
+}
+
+.tile-highlight{
+    outline:3px solid yellowgreen;
+    border-radius:4px;
+}
+
+#feedback{
+    font-weight:bold;
+    margin-top:14px;
+    min-height:24px;
+}
