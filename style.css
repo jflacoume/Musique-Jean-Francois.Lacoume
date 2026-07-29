@@ -1,6 +1,13 @@
+
+  
+
 body {
+    background-image: url(assets/vert.png);
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
     margin:30px;
-    background : lab(75.04% -54.69 19.45 / 0.262);
+    /*background : lab(75.04% -54.69 19.45 / 0.262);*/
     font-family:Arial,sans-serif;
     text-align :center;
 }
@@ -18,12 +25,22 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
+}
+.grosBouton{
+    text-align: center;
+    font-family: Verdana;
+    font-weight: 900;
+    height: 80px;
+    width: 80px;
+    color:rgb(43, 67, 226);
+    background-color: yellowgreen;
+    border-radius: 15px;
 }
 .bouton-rythme{
     border-width: 0px;
     padding: 0px;
-    background-color: red;
+    background-color: none;
     text-align: center;
 }
 .bouton-sol{
@@ -82,11 +99,12 @@ button{ cursor:pointer; }
     pointer-events:none;
 }
 .row-cell.selected .cell-empty-bg{
-    outline:3px solid limegreen;
+    outline:2px solid limegreen;
     border-radius:4px;
 }
 
 .tile-highlight{
+    width: 92%;
     outline:3px solid yellowgreen;
     border-radius:4px;
 }
@@ -94,5 +112,22 @@ button{ cursor:pointer; }
 #feedback{
     font-weight:bold;
     margin-top:14px;
-    min-height:24px;
+    text-align: center;
 }
+
+.mouton {
+    position: absolute;
+    bottom: 20px;
+    left: -100px;
+    font-size: 15em;
+    transform: scaleX(-1);
+    animation: traverser 5s linear infinite;
+  }
+  @keyframes traverser {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: 105%;
+    }
+  }

@@ -392,7 +392,7 @@ solutionBtn.addEventListener('click', () => {
   const targetOnsets = flattenOnsets(target);
   const isJuste = arraysClose(userOnsets, targetOnsets);
 
-  feedbackEl.textContent = isJuste ? 'JUSTE !' : 'FAUX !';
+  feedbackEl.textContent = isJuste ? '-- JUSTE ! --': '-- FAUX ! --';
   feedbackEl.style.color = isJuste ? '#118002' : '#c0392b';
 
   solutionRevealed = true;
