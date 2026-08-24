@@ -91,11 +91,10 @@ button{ cursor:pointer; }
 .cell-empty-bg{ position:absolute; top:0; left:0; width:80px; height:43px; cursor:pointer; }
 .pi-overlay{
     position:absolute;
-    /*top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);*/
-    height:43px;
+    top:0;
+    left:0;
     width:80px;
+    height:43px;
     pointer-events:none;
 }
 .row-cell.selected .cell-empty-bg{
