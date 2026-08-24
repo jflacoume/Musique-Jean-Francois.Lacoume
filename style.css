@@ -77,8 +77,8 @@ button{ cursor:pointer; }
     height:43px;
     display:flex;
     align-items:center;
-    justify-content:center;
-    margin:0px;
+    /*justify-content:center;
+    margin:0px;*/
 }
 .cell-img{
     max-width:100%;
