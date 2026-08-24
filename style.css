@@ -9,7 +9,7 @@ body {
     margin:30px;
     /*background : lab(75.04% -54.69 19.45 / 0.262);*/
     font-family:Arial,sans-serif;
-    text-align :center;
+    /*text-align :center;*/
 }
 .container{
     display: flex;
@@ -59,16 +59,17 @@ body {
 
 button{ cursor:pointer; }
 .bouton-rythme img, .bouton-sol img{
-    height:44px;
+    height:43px;
     width:auto;
     display:block;
 }
 .bouton-rythme:disabled{ cursor:default; }
 
 .row-sync{
-    align-items:center;
+    /*align-items:center;*/
     gap:0x;
     height:43px;
+    max-width:100%;
 }
 .row-cell{
     position:relative;
