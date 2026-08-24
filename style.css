@@ -72,12 +72,12 @@ button{ cursor:pointer; }
     height:43px;
 }
 .row-cell{
-    /*position:relative;*/
+    position:relative;
     width:80px;
     height:43px;
     display:flex;
     align-items:center;
-    justify-content:center;
+    /*justify-content:center;*/
     margin:0px;
 }
 .cell-img{
