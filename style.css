@@ -16,7 +16,7 @@ body {
     flex-direction: row;
     align-items:center;
     justify-content: center;
-    max-width:100%;
+
 }
 .container2{
     display: flex;
@@ -89,7 +89,7 @@ button{ cursor:pointer; }
     display:block;
 }
 .cell-tile-img{ cursor:pointer; }
-.cell-empty-bg{ position:absolute; top:0; left:0; width:80px; height:43px; cursor:pointer; }
+/*.cell-empty-bg{ position:absolute; top:0; left:0; width:80px; height:43px; cursor:pointer; }*/
 .pi-overlay{
     position:absolute;
     top:0;
