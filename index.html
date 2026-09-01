@@ -3,172 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reconnaître les rythmes</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Test de reconnaissance d'intervalles melodiques</title>
+    <script src="https://unpkg.com/tone" defer></script>
+    <link href = "style.css" rel="stylesheet">
 </head>
 <body>
-<div class="container3">
-    <div class="container">
-        <div><button class= "grosBouton" id="testBtn">TEST</button></div>
-        <div><button class= "grosBouton" id="encoreBtn">Encore</button></div>
+    <div class="conteneur">
+        <div class="box"><button id="0" class="grosBouton_int" etat="0" >Unisson</button></div>
+        <div class="box"></div>
+        <div class="box"><button id="5" class="grosBouton_int" etat="0">Quarte<br>juste</button></div>
+        <div class="box"></div>
+        <div class="box"><button id="12" class="grosBouton_int" etat="0">Octave</button></div>
+        <div class="box"><button id="1" class="grosBouton_int" etat="0">Seconde<br>mineure</button></div>
+        <div class="box"><button id="3" class="grosBouton_int" etat="0">Tierce<br>mineure</button></div>
+        <div class="box"><button id="6" class="grosBouton_int" etat="0">Quinte dim./<br>Quarte augm.</button></div>
+        <div class="box"><button id="8" class="grosBouton_int" etat="0">Sixte<br>mineure</button></div>
+        <div class="box"><button id="10" class="grosBouton_int" etat="0">Septieme<br>mineure</button></div>
+        <div class="box"><button id="2" class="grosBouton_int" etat="0">Seconde<br>Majeure</button></div>
+        <div class="box"><button id="4" class="grosBouton_int" etat="0">Tierce<br>Majeure</button></div>
+        <div class="box"><button id="7" class="grosBouton_int" etat="0">Quinte<br>juste</button></div>
+        <div class="box"><button id="9" class="grosBouton_int" etat="0">Sixte<br>Majeure</button></div>
+        <div class="box"><button id="11" class="grosBouton_int" etat="0">Septieme<br>Majeure</button></div>
     </div>
-
-    <div class="container2">
-        <div>
-            <input type="range" id="tempo" name="tempo" min="60" max="160" step="5" value="100" />
-            <label for="tempo"><br>Tempo</label>
-        </div>
-
-        <div>
-            <input type="range" id="nb-puls" name="nb-puls" min="1" max="4" value="4" step="1" />
-            <label for="nb-puls"><br>Nombre de pulsations</label>
-        </div>
+    <div class="conteneur2">
+        <div class="box"><button id="selectAll" class="grosBouton" etat="1" >Tous/<br>Aucun</button></div>
+        <div class="box"><button id="validChoix" class="grosBouton" etat="1">Valider</button></div>
+        <div class="box"><button id="recommencer" class="grosBouton">Recommencer</button></div>
     </div>
-</div>
-
-<div class="espace"></div>
-<div class="container">
-    <div>
-    <button class="bouton-rythme" id="eyeBtn">
-        <img src="" alt="">
-    </button>
-     </div>
-    <div><image src = "assets/transparent.png"></div>  
-</div>
-
-
-<div class="container">
-    <div class="tableau-rythme">
-        <button class="bouton-rythme" data-tile="r6">
-            <img src="assets/r6.png" alt="Blanche">
-        </button>
+     <div class="conteneur2">
+        <div class="box"><button id="bon" class="grosBouton reponse" etat="0">BONNE<br>Réponse</button></div>   
+        <div class="box"><button id="test" class="grosBouton" etat="0">-- TEST --</button></div>
+        <div class="box"><button id="mauvais" class="grosBouton reponse" etat="0">MIAUVAISE<br>Réponse</button></div>      
     </div>
-    <div>
-        <button class="bouton-rythme" data-tile="r5">
-            <img src="assets/r5.png" alt="Noire pointée + croche">
-        </button>
-    </div>
-    <div><image src = "assets/transparent.png"></div>
-</div>
-
-<div class="container">
-    <div>
-        <button class="bouton-rythme" data-tile="r4">
-            <img src="assets/r4.png" alt="Noire">
-        </button>
-    </div>
-    <div>
-        <button class="bouton-rythme" data-tile="r3">
-            <img src="assets/r3.png" alt="Deux croches">
-        </button>
-    </div>
-    <div>
-        <button class="bouton-rythme" data-tile="r1">
-            <img src="assets/r1.png" alt="Deux croches">
-        </button>
-    </div>
-    <div>
-        <button class="bouton-rythme" data-tile="r0">
-            <img src="assets/r0.png" alt="Quatre doubles-croches">
-        </button>
-    </div>
-    <div><image src = "assets/transparent.png"></div>
-</div>
-
-<div class="container">
-    <div>
-        <button class="bouton-rythme" disabled>
-            <img src="assets/blanc2.png" alt="">
-        </button>
-    </div>
-    <div>
-        <button class="bouton-rythme" disabled>
-            <img src="assets/blanc2.png" alt="">
-        </button>
-    </div>
-    <div>
-        <button class="bouton-rythme" data-tile="r2">
-            <img src="assets/r2.png" alt="Double-double-croche">
-        </button>
-    </div>
-    <div>
-        <button class="bouton-rythme" id="effaceBtn">
-            <img src="assets/efface.png" alt="Efface">
-        </button>
-    </div>
-    <div><image src = "assets/transparent.png"></div>
-</div>
-
-<div class="espace"></div>
-
-<div class="container row-sync" id="pulsRow">
-    <div class="row-cell"><img class="cell-img" id="puls-img-0"></div>
-    <div class="row-cell"><img class="cell-img" id="puls-img-1"></div>
-    <div class="row-cell"><img class="cell-img" id="puls-img-2"></div>
-    <div class="row-cell"><img class="cell-img" id="puls-img-3"></div>
-    <div class="row-cell"><img class="cell-img" id="puls-img-4"></div>
-</div>
-
-<div class="container row-sync" id="repRow">
-    <div class="row-cell" id="rep-cell-0">
-        <img class="cell-img cell-empty-bg" id="rep-bg-0" src="assets/reponse.png">
-        <img class="cell-img pi-overlay" id="rep-pi-0" src="assets/PI2.png">
-        <img class="cell-img cell-tile-img" id="rep-tile-0">
-    </div>
-    <div class="row-cell" id="rep-cell-1">
-        <img class="cell-img cell-empty-bg" id="rep-bg-1" src="assets/reponse.png">
-        <img class="cell-img pi-overlay" id="rep-pi-1" src="assets/PI2.png">
-        <img class="cell-img cell-tile-img" id="rep-tile-1">
-    </div>
-    <div class="row-cell" id="rep-cell-2">
-        <img class="cell-img cell-empty-bg" id="rep-bg-2" src="assets/reponse.png">
-        <img class="cell-img pi-overlay" id="rep-pi-2" src="assets/PI2.png">
-        <img class="cell-img cell-tile-img" id="rep-tile-2">
-    </div>
-    <div class="row-cell" id="rep-cell-3">
-        <img class="cell-img cell-empty-bg" id="rep-bg-3" src="assets/reponse.png">
-        <img class="cell-img pi-overlay" id="rep-pi-3" src="assets/PI2.png">
-        <img class="cell-img cell-tile-img" id="rep-tile-3">
-    </div>
-    <div class="row-cell" id="rep-cell-4">
-        <img class="cell-img cell-empty-bg" id="rep-bg-4" src="assets/reponse.png">
-        <img class="cell-img pi-overlay" id="rep-pi-4" src="assets/retombee.png">
-        <img class="cell-img cell-tile-img" id="rep-tile-4">
-    </div>
-</div>
-
-<div class="container row-sync" id="solRow">
-    <div class="row-cell" id="sol-cell-0">
-        <img class="cell-img" id="sol-hog-0" src="assets/herisson.png">
-        <img class="cell-img cell-tile-img" id="sol-tile-0">
-    </div>
-    <div class="row-cell" id="sol-cell-1">
-        <img class="cell-img" id="sol-hog-1" src="assets/herisson.png">
-        <img class="cell-img cell-tile-img" id="sol-tile-1">
-    </div>
-    <div class="row-cell" id="sol-cell-2">
-        <img class="cell-img" id="sol-hog-2" src="assets/herisson.png">
-        <img class="cell-img cell-tile-img" id="sol-tile-2">
-    </div>
-    <div class="row-cell" id="sol-cell-3">
-        <img class="cell-img" id="sol-hog-3" src="assets/herisson.png">
-        <img class="cell-img cell-tile-img" id="sol-tile-3">
-    </div>
-    <div class="row-cell" id="sol-cell-4">
-        <img class="cell-img" id="sol-hog-4" src="assets/transparent.png">
-        <img class="cell-img cell-tile-img" id="sol-tile-4">
-    </div>
-</div>
-<div class ="container">
-    <div id="feedback"></div><div></div><span><img src = "assets/transparent.png"></span></div>
-</div>
-
-<div class="container">
-    <div><button class= "grosBouton" id="solutionBtn">Solution</button><span><img src = "assets/transparent.png"></span></div>
-</div>
-
-<div class="mouton">🦔</div>
-
 
 
 <script src="script.js"></script>

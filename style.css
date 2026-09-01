@@ -1,134 +1,65 @@
-
-  
-
-body {
-    background-image: url(assets/vert.png);
-    background-repeat: repeat;
-    /*background-size: auto;*/
-    background-position: top left;
-    margin:30px;
-    /*background : lab(75.04% -54.69 19.45 / 0.262);*/
-    font-family:Arial,sans-serif;
-    /*text-align :center;*/
-}
-.container{
-    display: flex;
-    flex-direction: row;
-    align-items:center;
+.conteneur {
     justify-content: center;
+    display: grid;
+    border: 1em solid rgb(137, 236, 137);
+    border-radius : 2em;
+    background: linear-gradient(90deg, #f0700d, #2ebf91);
+    grid-template-columns:  10em 10em 10em 10em 10em;
+    grid-template-rows: 10em 10em 10em ;
+    padding: 5em;
+    margin-inline: 10em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    gap : 2em;
+}
+.conteneur2 {
+    justify-content: space-evenly;
+    display: flex;
+    margin-bottom: 2em;
+}
 
-}
-.container2{
-    display: flex;
-    flex-direction: column;
+.box{
+    display :flex;
+    align-items: center; /* Centre le texte verticalement */
     justify-content: center;
+    text-align: center;
 }
-.container3{
-    display: flex;
-    flex-direction: row;
+.grosBouton_int:active{
+       color: crimson;
+}
+#validChoix:active, #recommencer:active{
+        background-color: crimson;
+}
+.grosBouton, .grosBouton_int{
+    align-items: center; /* Centre le texte verticalement */
     justify-content: center;
-    gap: 20px;
-}
-.grosBouton{
     text-align: center;
     font-family: Verdana;
+    font-size: 1em;
     font-weight: 900;
-    height: 80px;
-    width: 80px;
+    height: 10em;
+    width: 10em;
     color:rgb(43, 67, 226);
     background-color: yellowgreen;
-    border-radius: 15px;
+    border-radius: 1.5em;
 }
-.bouton-rythme{
-    border-width: 0px;
-    padding: 0px;
-    background-color: none;
+ #test {background-color: aquamarine;}
+
+.toggle{
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center;
     text-align: center;
-}
-.bouton-sol{
-    border-width: 0px;
-    padding: 0px;
-    background-color: black;
-    text-align: center;
-}
-.espace{
-    margin: 30px;
-}
-
-
-/* --- Ajouts pour le fonctionnement du jeu --- */
-
-button{ cursor:pointer; }
-.bouton-rythme img, .bouton-sol img{
-    height:43px;
-    width:auto;
-    display:block;
-}
-.bouton-rythme:disabled{ cursor:default; }
-
-.row-sync{
-    /*align-items:center;*/
-    gap:0x;
-    height:43px;
-    max-width:100%;
-}
-.row-cell{
-    position:relative;
-    width:80px;
-    height:43px;
-    /*display:flex;*/
-    /*align-items:center;*/
-    justify-content:center;
-    margin:0px;
-}
-.cell-img{
-    max-width:100%;
-    max-height:100%;
-    width:80px;
-    height:43px;
-    display:block;
-}
-.cell-tile-img{ cursor:pointer; }
-.cell-empty-bg{ position:relative; width:80px; height:43px; cursor:pointer; }
-.pi-overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:80px;
-    height:43px;
-    pointer-events:none;
-}
-.row-cell.selected .cell-empty-bg{
-    outline:2px solid limegreen;
-    border-radius:4px;
+    font-family: Verdana;
+    font-size: 0.8em;
+    font-weight: 900;
+    height: 7em;
+    width: 7em;
+    color:rgb(43, 67, 226);
+    background-color: yellowgreen;
+    border-radius: 1.5em;
 }
 
-.tile-highlight{
-    width: 92%;
-    outline:3px solid yellowgreen;
-    border-radius:4px;
+.reponse{
+    background-color: transparent;
+    color: transparent;
 }
-
-#feedback{
-    font-weight:bold;
-    margin-top:14px;
-    text-align: center;
-}
-
-.mouton {
-    display: inline-block;
-    position: absolute;
-    bottom: 20px;
-    left: -100px;
-    font-size: 50px;
-    transform: scaleX(1);
-    animation: traverser 15s linear infinite;
-  }
-  @keyframes traverser {
-    100% {
-      left: -100px;
-    }
-    0% {
-      left: 105%;
-    }
-  }
