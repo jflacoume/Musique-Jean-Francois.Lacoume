@@ -1,0 +1,9 @@
+body{
+    font-family: Chalkduster ;
+}
+.conteneur {
+  display: flex;             /* Active le mode Flexbox */
+  align-items: center;       /* Centre verticalement tous les enfants */
+  justify-content: center;   /* Centre horizontalement (optionnel) */
+  height: 200px;             /* Donnez une hauteur fixe ou min-height au conteneur */
+}
