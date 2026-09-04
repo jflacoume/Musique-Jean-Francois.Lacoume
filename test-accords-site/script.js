@@ -2,7 +2,7 @@ let phase = false;
 let listTest = [];
 let numeroAccord = 0;
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const listAccord =[[0, 4, 7], [0, 4, 8], [0, 4, 7, 10], [0, 4, 7, 11], [0, 3, 6, 10], [0, 3, 7], [0, 3, 6], [0, 3, 6, 10], [0, 3, 6, 9 ]];
+const listAccord =[[0, 4, 7], [0, 4, 8], [0, 4, 7, 10], [0, 4, 7, 11], [0, 3, 6, 10], [0, 3, 7], [0, 3, 6], [0, 3, 7, 10], [0, 3, 6, 9 ]];
 
 document.addEventListener('click', function(event) {
     const bouton = event.target ;
