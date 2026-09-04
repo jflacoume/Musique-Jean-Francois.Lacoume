@@ -1,0 +1,78 @@
+
+.conteneur {
+    justify-content: center;
+    display: grid;
+    border: 3px solid rgb(137, 236, 137);
+    border-radius : 1%;
+    background: linear-gradient(90deg, #f0700d, #2ebf91);
+    grid-template-columns:  20% 20% 20% 20% 20%;
+    grid-template-rows: 30% 30% 30%;
+    margin-inline: 1%;
+    margin-top: 5%;
+    padding-top : 2%;
+    padding-bottom : 2%;
+    margin-bottom: 5%;
+    height : 40vh;
+}
+.conteneur2 {
+    justify-content: center;
+    display: grid;
+    border: 3px solid rgb(137, 236, 137);
+    border-radius : 1%;
+    background: linear-gradient(90deg, #2ebf91 ,#f0700d);
+    grid-template-columns: 30% 30% 30% ;
+    grid-template-rows: 50% 50%;
+    margin-inline: 1%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height : 30vh;
+    padding-top :2%;
+    padding-bottom : 2%;
+}
+
+.box{
+    display :flex;
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center;
+    text-align: center;
+}
+.grosBouton_int:active{
+       color: crimson;
+}
+#validChoix:active, #recommencer:active{
+        background-color: crimson;
+}
+.grosBouton, .grosBouton_int{
+    align-items: center;
+    /* Centre le texte verticalement */
+    /*justify-content: center;*/
+    /*text-align: center;*/
+    font-family: Verdana;
+    font-size: 70%;
+    font-weight: 900;
+    height: 100%;
+    width: 100%;
+    color:rgb(43, 67, 226);
+    background-color: yellowgreen;
+    border-radius: 1.5em;
+}
+ #test {background-color: aquamarine;}
+
+.toggle{
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 100%;
+    font-weight: 900;
+    height: 100%;
+    width: 100%;
+    color:rgb(43, 67, 226);
+    background-color: yellowgreen;
+    border-radius: 1.5em;
+}
+
+.reponse{
+    background-color: transparent;
+    color: transparent;
+}
