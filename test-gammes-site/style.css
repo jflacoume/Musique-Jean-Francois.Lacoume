@@ -1,4 +1,13 @@
+body {
+    background-image: url(../assets/topography2.svg);
 
+    background-repeat: repeat;
+    background-position: top left;
+    margin:30px;
+  
+    font-family:Arial,sans-serif;
+
+}
 .conteneur {
     justify-content: center;
     display: grid;
@@ -76,3 +85,21 @@
     background-color: transparent;
     color: transparent;
 }
+
+.mouton {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    left: -100px;
+    font-size: 50px;
+    transform: scaleX(1);
+    animation: traverser 15s linear infinite;
+  }
+  @keyframes traverser {
+    100% {
+      left: -100px;
+    }
+    0% {
+      left: 105%;
+    }
+  }

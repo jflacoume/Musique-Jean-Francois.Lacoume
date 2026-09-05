@@ -2,10 +2,12 @@ body{
     margin-left: 10%;
     margin-right: 10%;
     font-family: Chalkduster ;
-    background-image: url(assets/IMG_6666.jpg);
-    background-size: cover;       /* L'image s'étire pour couvrir tout l'écran */
+    font-size: 150%;
+    font-weight : 900;
+    background-image: url(assets/topography.svg);
+    background-size: 200px;       /* L'image s'étire pour couvrir tout l'écran */
     background-position: center;  /* L'image reste centrée */
-    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-repeat: repeat; /* Empêche l'image de se répéter */
     height: 100vh;                /* Prend toute la hauteur de la fenêtre */
     margin: 0;      
 }
@@ -15,5 +17,5 @@ body{
   justify-content: center;   /* Centre horizontalement (optionnel) */
   gap: 3%;
   height: 20%;
-  margin:2%;             /* Donnez une hauteur fixe ou min-height au conteneur */
+  margin:2%;  
 }
