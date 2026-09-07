@@ -42,6 +42,7 @@ body {
     align-items: center; /* Centre le texte verticalement */
     justify-content: center;
     text-align: center;
+    overflow-wrap: break-word;
 }
 
 .one {
