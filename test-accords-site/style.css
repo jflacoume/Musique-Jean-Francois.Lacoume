@@ -30,14 +30,13 @@ body {
     border: 3px solid rgb(137, 236, 137);
     border-radius : 1%;
     background: linear-gradient(90deg, #2ebf91 ,#f0700d);
-    grid-template-columns: 30% 30% 30% ;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     margin-inline: 1%;
     margin-top: 5%;
     margin-bottom: 5%;
     height : 30vh;
-    padding-top :2%;
-    padding-bottom : 2%;
+    padding :2%;   
 }
 
 .box{
@@ -45,6 +44,27 @@ body {
     align-items: center; /* Centre le texte verticalement */
     justify-content: center;
     text-align: center;
+}
+
+.one {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.two {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.three {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.four {
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+.five {
+    grid-row-start: 3;
+    grid-row-end: 5;
 }
 .grosBouton_int:active{
        color: crimson;

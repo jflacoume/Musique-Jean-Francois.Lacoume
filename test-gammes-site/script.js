@@ -14,6 +14,9 @@ const listGamme = [ [0, 2, 4, 5, 7, 9, 11, 12 ],
                     [0, 1, 3, 4, 6, 7, 9, 10, 12],
                     [0, 2, 4, 6, 8, 10, 12] ]
 let numeroGamme = 0;
+let noteDep = 0; 
+let gamme = [];
+
 
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
@@ -62,15 +65,20 @@ document.addEventListener('click', function(event) {
     
         if (bouton.id === "test") {
             
-            const noteDep = Math.floor(Math.random()*40) +40 ; 
+            noteDep = Math.floor(Math.random()*40) +40 ; 
             numeroGamme = listTest[Math.floor(Math.random()*listTest.length)] ;
-            const gamme = listGamme[numeroGamme] ;
+            gamme = listGamme[numeroGamme] ;
 
             bt_bon.style.backgroundColor = "transparent";
             bt_bon.style.color = "transparent";
             bt_mauvais.style.backgroundColor = "transparent";
             bt_mauvais.style.color = "transparent";
 
+            for (let i=0; i < gamme.length; i++){
+                playClick(start+ i*0.3, Tone.mtof(noteDep + gamme[i]));
+            }
+        }
+        else if (bouton.id === "encore"){
             for (let i=0; i < gamme.length; i++){
                 playClick(start+ i*0.3, Tone.mtof(noteDep + gamme[i]));
             }

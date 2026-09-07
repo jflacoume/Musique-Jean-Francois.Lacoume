@@ -2,7 +2,28 @@ let phase = false;
 let listTest = [];
 let numeroAccord = 0;
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const listAccord =[[0, 4, 7], [0, 4, 8], [0, 4, 7, 10], [0, 4, 7, 11], [0, 3, 6, 10], [0, 3, 7], [0, 3, 6], [0, 3, 7, 10], [0, 3, 6, 9 ]];
+let noteDep = 0 ;
+let freqFond = 0;
+const customPoly = new Tone.PolySynth(Tone.Synth, {
+            oscillator: {
+                type: "triangle"
+            },
+            envelope: {
+                attack: 0.05,
+                decay: 0.5,
+                sustain: 0.6,
+                release: 1
+            }
+            }).toDestination();
+const listAccord =[[0, 4, 7], 
+                    [0, 4, 8],
+                    [0, 4, 7, 10],
+                    [0, 4, 7, 11],
+                    [0, 3, 6, 10],
+                    [0, 3, 7],
+                    [0, 3, 6],
+                    [0, 3, 7, 10],
+                    [0, 3, 6, 9 ]];
 
 document.addEventListener('click', function(event) {
     const bouton = event.target ;
@@ -49,26 +70,17 @@ document.addEventListener('click', function(event) {
             bt_bon.style.color = "transparent";
             bt_mauvais.style.backgroundColor = "transparent";
             bt_mauvais.style.color = "transparent";
-            const noteDep = Math.floor(Math.random() * 40) +45 ;
-            const freqFond = Tone.mtof(noteDep) ;
+            noteDep = Math.floor(Math.random() * 40) +45 ;
+            freqFond = Tone.mtof(noteDep) ;
             numeroAccord = listTest[Math.floor(Math.random() * listTest.length)];
 
-            const customPoly = new Tone.PolySynth(Tone.Synth, {
-            oscillator: {
-                type: "triangle"
-            },
-            envelope: {
-                attack: 0.05,
-                decay: 0.5,
-                sustain: 0.6,
-                release: 1
-            }
-            }).toDestination();
+         
             customPoly.volume.value = -8.5;
             customPoly.triggerAttackRelease(Tone.Frequency(freqFond).harmonize(listAccord[numeroAccord]), "2n");
-            console.log(numeroAccord+"--"+listAccord[numeroAccord]);
-
-
+        }
+        else if (bouton.id === "encore"){
+            customPoly.volume.value = -8.5;
+            customPoly.triggerAttackRelease(Tone.Frequency(freqFond).harmonize(listAccord[numeroAccord]), "2n");
         }
         else if (bouton.matches(".grosBouton_int")) {
             console.log("num"+numeroAccord+" id"+bouton.id);  

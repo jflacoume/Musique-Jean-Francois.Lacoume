@@ -1,21 +1,124 @@
-body{
-    margin-left: 10%;
-    margin-right: 10%;
-    font-family: Chalkduster ;
-    font-size: 150%;
-    font-weight : 900;
-    background-image: url(assets/topography.svg);
-    background-size: 200px;       /* L'image s'étire pour couvrir tout l'écran */
-    background-position: center;  /* L'image reste centrée */
-    background-repeat: repeat; /* Empêche l'image de se répéter */
-    height: 100vh;                /* Prend toute la hauteur de la fenêtre */
-    margin: 0;      
+
+body {
+    background-image: url(../assets/topography2.svg);
+    background-repeat: repeat;
+    background-position: top left;
+    margin:30px;
+    font-family:Arial,sans-serif;
 }
 .conteneur {
-  display: flex;             /* Active le mode Flexbox */
-  align-items: center;       /* Centre verticalement tous les enfants */
-  justify-content: center;   /* Centre horizontalement (optionnel) */
-  gap: 3%;
-  height: 20%;
-  margin:2%;  
+    justify-content: center;
+    display: grid;
+    border: 3px solid rgb(137, 236, 137);
+    border-radius : 1%;
+    background: linear-gradient(90deg, #f0700d, #2ebf91);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1f;
+    margin-inline: 1%;
+    margin-top: 5%;
+    padding :2%;
+    margin-bottom: 5%;
+    height : 40vh;
 }
+.conteneur2 {
+    justify-content: center;
+    display: grid;
+    border: 3px solid rgb(137, 236, 137);
+    border-radius : 1%;
+    background: linear-gradient(90deg, #2ebf91 ,#f0700d);
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-inline: 1%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height : 30vh;
+    padding :2%;   
+}
+
+.box{
+    display :flex;
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center;
+    text-align: center;
+}
+
+.one {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.two {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.three {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.four {
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+.five {
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+
+.grosBouton_int:active{
+       color: crimson;
+}
+#validChoix:active, #recommencer:active{
+        background-color: crimson;
+}
+.grosBouton, .grosBouton_int{
+    align-items: center;
+    /* Centre le texte verticalement */
+    /*justify-content: center;*/
+    /*text-align: center;*/
+    font-family: Verdana;
+    font-size: 70%;
+    font-weight: 900;
+    height: 100%;
+    width: 100%;
+    color:rgb(43, 67, 226);
+    background-color: yellowgreen;
+    border-radius: 1.5em;
+}
+ #test {background-color: aquamarine;}
+
+.toggle{
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 100%;
+    font-weight: 900;
+    height: 100%;
+    width: 100%;
+    color:rgb(43, 67, 226);
+    background-color: yellowgreen;
+    border-radius: 1.5em;
+}
+
+.reponse{
+    background-color: transparent;
+    color: transparent;
+}
+
+.mouton {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    left: -100px;
+    font-size: 50px;
+    transform: scaleX(1);
+    animation: traverser 15s linear infinite;
+  }
+  @keyframes traverser {
+    100% {
+      left: -100px;
+    }
+    0% {
+      left: 105%;
+    }
+  }
