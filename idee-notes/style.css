@@ -10,62 +10,35 @@ body {
 
 }
 .conteneur {
+    align-items: center;
     justify-content: center;
     display: grid;
     border: 3px solid rgb(137, 236, 137);
     border-radius : 1%;
     background: linear-gradient(90deg, #f0700d, #2ebf91);
     grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0.8fr 1fr;
+    grid-template-rows: 1fr 1fr;
     margin-inline: 1%;
     margin-top: 5%;
     padding-top : 2%;
     padding-bottom : 2%;
     margin-bottom: 5%;
-    height : 40vh;
-}
-.conteneur2 {
-    justify-content: center;
-    display: grid;
-    border: 3px solid rgb(137, 236, 137);
-    border-radius : 1%;
-    background: linear-gradient(90deg, #2ebf91 ,#f0700d);
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin-inline: 1%;
-    margin-top: 5%;
-    margin-bottom: 5%;
     height : 30vh;
-    padding :2%;   
+    gap: 5%;
+    
 }
 
 .box{
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 80%;
+    width: 80%;
     display :flex;
     align-items: center; /* Centre le texte verticalement */
     justify-content: center;
     text-align: center;
 }
 
-.one {
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.two {
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.three {
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.four {
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
-.five {
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
 .grosBouton_int:active{
        color: crimson;
 }
@@ -86,6 +59,12 @@ body {
     background-color: yellowgreen;
     border-radius: 1.5em;
 }
+.grosBouton_int{
+  font-family: Chalkduster;
+    font-size: 100%;
+}
+
+
  #test {background-color: aquamarine;}
 
 .toggle{
@@ -124,3 +103,19 @@ body {
       left: 105%;
     }
   }
+datalist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  writing-mode: horizontal-tb;
+  width: 200px;
+}
+
+option {
+  padding: 0;
+}
+
+input[type="range"] {
+  width: 200px;
+  margin: 0;
+}

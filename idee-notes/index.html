@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idées de notes pour improviser ou créer</title>
+    <link href = "style.css" rel="stylesheet">
+</head>
+<body>
+    <script src="https://unpkg.com/tone"></script>
+    <div class="conteneur">
+        
+        <div class="box"><button id="lance-de" class="grosBouton" etat="0"><img id = "de" src = "dice.svg" width="50%"></br>Lance le dé !</button></div>
+        <div class="box"></div>
+        <div class="box"><button id="recommencer" class="grosBouton" etat="0">Recommencer</button></div>
+        <div class="box"></div>
+        <div>
+            <label for="nb-puls"><br>Nombre de notes</label>
+            <input type="range" id="nb-puls" name="nb-puls" min="1" max="5" step="1" list="values" Value="5" autocomplete="off"/>
+            <datalist id="values">
+                <option value=1 label="1"></option>
+                <option value=2 label="2"></option>
+                <option value=3 label="3"></option>
+                <option value=4 label="4"></option>
+                <option value=5 label="5"></option>
+            </datalist>
+        </div>
+        <div class="box"><button id=1 class="grosBouton_int">1</button></div>
+        <div class="box"><button id=2 class="grosBouton_int">2</button></div>
+        <div class="box"><button id=3 class="grosBouton_int">3</button></div>
+        <div class="box"><button id=4 class="grosBouton_int">4</button></div>
+        <div class="box"><button id=5 class="grosBouton_int">5</button></div>
+    </div>
+</br>
+<a href="../index.html">Retour au sommaire</a>
+<div class="mouton"><img src = "../assets/bug.svg" width = "50px"></div>
+<script src="script.js"></script>
+ 
+</body>
+</html>
