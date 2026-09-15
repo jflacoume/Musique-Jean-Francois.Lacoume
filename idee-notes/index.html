@@ -10,11 +10,8 @@
     <script src="https://unpkg.com/tone"></script>
     <div class="conteneur">
         
-        <div class="box"><button id="lance-de" class="grosBouton" etat="0"><img id = "de" src = "dice.svg" width="50%"></br>Lance le dé !</button></div>
-        <div class="box"></div>
-        <div class="box"><button id="recommencer" class="grosBouton" etat="0">Recommencer</button></div>
-        <div class="box"></div>
-        <div>
+        <div class="box one"><button id="lance-de" class="grosBouton" etat="0"><img id = "de" src = "dice.svg" width="50%" height="50%"></br>Lance !</button></div>
+        <div class="three">
             <label for="nb-puls"><br>Nombre de notes</label>
             <input type="range" id="nb-puls" name="nb-puls" min="1" max="5" step="1" list="values" Value="5" autocomplete="off"/>
             <datalist id="values">
@@ -25,6 +22,8 @@
                 <option value=5 label="5"></option>
             </datalist>
         </div>
+        <div class="box two"><button id="recommencer" class="grosBouton" etat="0">Init</button></div>
+        
         <div class="box"><button id=1 class="grosBouton_int">1</button></div>
         <div class="box"><button id=2 class="grosBouton_int">2</button></div>
         <div class="box"><button id=3 class="grosBouton_int">3</button></div>

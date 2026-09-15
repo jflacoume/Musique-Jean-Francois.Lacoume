@@ -3,7 +3,7 @@ body {
   background-image: url(../assets/topography2.svg);
   background-repeat: repeat;
   background-position: top left;
-  margin:30px;
+  margin:10px;
   font-family:Arial,sans-serif;
 
 
@@ -15,20 +15,19 @@ body {
   border: 3px solid rgb(137, 236, 137);
   border-radius : 1%;
   background: linear-gradient(90deg, #f0700d, #2ebf91);
-  grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 0.4fr;
+  grid-template-columns:  0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-template-rows: 0.8fr 0.8fr 0.8fr;
   margin-inline: 1%;
   margin-top: 5%;
-  padding-top : 2%;
-  padding-bottom : 2%;
+  padding: 2%;
   margin-bottom: 5%;
-  height : 40vh;
+  height : 60vh;
     
 }
 
 .box{
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
   height: 80%;
   width: 80%;
   display :flex;
@@ -50,7 +49,7 @@ body {
   /*justify-content: center;*/
   /*text-align: center;*/
   font-family: Verdana;
-  font-size: 65%;
+  font-size: 75%;
   font-weight: 900;
   height: 100%;
   width: 100%;
@@ -92,6 +91,7 @@ body {
     left: -100px;
     font-size: 50px;
     transform: scaleX(1);
+    transform: rotate(-90deg);
     animation: traverser 15s linear infinite;
   }
   @keyframes traverser {
@@ -121,14 +121,29 @@ input[type="range"] {
 }
 
 .one {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 .two {
-  grid-column-start: 5;
-  grid-column-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 .three {
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+.four {
+grid-row-start: 2 ;
+grid-column-start: 3;
+grid-column-end: 4;
+}
+.five {
+grid-row-start: 3;
+grid-column-start: 1;
+grid-column-end: 3;
+}
+.six {
+grid-row-start: 3;
+  grid-column-start: 4;
+  grid-column-end: 6;
 }
