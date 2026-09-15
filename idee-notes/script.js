@@ -1,31 +1,32 @@
+    const choixNotes= document.getElementById("nb-puls");
+    let nombreDeNotes = "5";
+    let iteration = 1;
+    const listeNotes = ["DO", "RE", "MI", "FA", "SOL", "LA", "SI"]
+   
 
-const range = [13, 25, 49, 88];
-const depart = [60, 48, 36, 21];
-let r = 0;
-let noteDep = 60 ;
-let note = 60;
+    document.addEventListener('click', function(event) {
+        const bouton = event.target ;
 
-var selectedPreset=_tone_0000_JCLive_sf2_file;
-var AudioContextFunc = window.AudioContext || window.webkitAudioContext;
-var audioContext = new AudioContextFunc();
-var player=new WebAudioFontPlayer();
-player.loader.decodeAfterLoading(audioContext, '_tone_0000_JCLive_sf2_file');
-	
-document.addEventListener('click', function(event) {
-    const bouton = event.target ;
-	if (bouton.id <= 3) {for (let i = 0; i<4; i++) {
-		const bt1= document.getElementById(i);
-		bt1.style.backgroundColor = "transparent";
-	}
-	bouton.style.backgroundColor = "cornsilk";
-	r = range[bouton.id] ;
-	noteDep = depart[bouton.id] ;
-	
-}
-if (bouton.id === "4" ) {
+        if (bouton.id === "nb-puls"){
+            nombreDeNotes = parseInt(choixNotes.value);
+       
+            for (let i =  1; i <= 5; i++) {
+                const bt1= document.getElementById(i);
+                bt1.style.backgroundColor = (i < nombreDeNotes +1) ? "cornsilk" : "transparent";
+            }
+        }
+        else if (bouton.id === "recommencer") {
+            iteration = 1;
+            for ( let i = 1; i<= 5; i++) {
+                const bt1 = document.getElementById(i) ;
+                bt1.textContent = i;
+            }
+        }
+        else if ((bouton.id === "lance-de") || (bouton.id === "de") && (iteration <= nombreDeNotes)){
+            note = Math.floor(Math.random() * 7);
+            const bt1= document.getElementById(iteration);
+            bt1.textContent = listeNotes[note];
+            iteration ++;
+        }
+        })
 
-	note = parseInt(Math.floor(Math.random() * r) + noteDep) ;
-	player.queueWaveTable(audioContext, audioContext.destination, selectedPreset, 0, note, 2);
-}
-if (bouton.id === "5") player.queueWaveTable(audioContext, audioContext.destination, selectedPreset, 0, note, 2);
-})
