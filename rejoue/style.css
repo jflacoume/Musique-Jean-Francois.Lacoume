@@ -12,24 +12,28 @@ body {
   align-items: center;
   justify-content: center;
   display: grid;
+  gap: 5%;
   border: 3px solid rgb(137, 236, 137);
   border-radius : 1%;
   background: linear-gradient(90deg, #f0700d, #2ebf91);
-  grid-template-columns:  0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-template-columns:  repeat(6, 1fr);
   grid-template-rows: 0.8fr 0.8fr 0.8fr;
   margin-inline: 1%;
   margin-top: 5%;
   padding: 2%;
   margin-bottom: 5%;
-  height : 60vh;
-    
+  height : 60vh;    
+}
+.item1 {
+  grid-area: b;
 }
 
 .box{
-  margin-left: 3%;
-  margin-right: 3%;
-  height: 80%;
-  width: 80%;
+  
+  margin-left: 3px;
+  margin-right: 3px;
+  height: 100%;
+  width: 100%;
   display :flex;
   align-items: center; /* Centre le texte verticalement */
   justify-content: center;
@@ -133,16 +137,22 @@ input[type="range"] {
   grid-column-end: 5;
 }
 .four {
-grid-row-start: 2 ;
-grid-column-start: 3;
-grid-column-end: 4;
+grid-row-start: 1 ;
+grid-column-start: 5;
+grid-column-end: 6;
 }
 .five {
-grid-row-start: 3;
-grid-column-start: 1;
-grid-column-end: 3;
+grid-row-start: 2;
+grid-column-start: 2;
+grid-column-end: 6;
+
 }
 .six {
+grid-row-start: 3;
+grid-column-start: 2;
+grid-column-end: 4;
+}
+.seven {
 grid-row-start: 3;
   grid-column-start: 4;
   grid-column-end: 6;
