@@ -16,7 +16,7 @@ body {
   border-radius : 1%;
   background: linear-gradient(90deg, #f0700d, #2ebf91);
   grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 0.4fr;
+  grid-template-rows: 1fr 1fr;
   margin-inline: 1%;
   margin-top: 5%;
   padding-top : 2%;
@@ -27,10 +27,10 @@ body {
 }
 
 .box{
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10px;
+  margin-right: 10px;
   height: 80%;
-  width: 80%;
+  width: 1fr;
   display :flex;
   align-items: center; /* Centre le texte verticalement */
   justify-content: center;
@@ -117,7 +117,7 @@ option {
 
 input[type="range"] {
   width: 80%;
-  margin: 0;
+  margin: 0%;
 }
 
 .one {

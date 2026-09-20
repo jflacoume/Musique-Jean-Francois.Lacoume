@@ -16,7 +16,7 @@ body {
   border: 3px solid rgb(137, 236, 137);
   border-radius : 1%;
   background: linear-gradient(90deg, #f0700d, #2ebf91);
-  grid-template-columns:  repeat(6, 1fr);
+  grid-template-columns:  repeat(4, 1fr);
   grid-template-rows: 0.8fr 0.8fr 0.8fr;
   margin-inline: 1%;
   margin-top: 5%;
@@ -124,36 +124,20 @@ input[type="range"] {
   margin: 0;
 }
 
-.one {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-.two {
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-.three {
-  grid-column-start: 4;
-  grid-column-end: 5;
-}
-.four {
-grid-row-start: 1 ;
-grid-column-start: 5;
-grid-column-end: 6;
-}
+
 .five {
 grid-row-start: 2;
-grid-column-start: 2;
-grid-column-end: 6;
+grid-column-start: 1;
+grid-column-end: 5;
 
 }
 .six {
 grid-row-start: 3;
-grid-column-start: 2;
-grid-column-end: 4;
+grid-column-start: 1;
+grid-column-end: 3;
 }
 .seven {
 grid-row-start: 3;
-  grid-column-start: 4;
-  grid-column-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
