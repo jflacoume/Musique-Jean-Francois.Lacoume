@@ -1,0 +1,96 @@
+body {
+  margin: 2px;
+  padding: 20px;
+   
+  /* Un dégradé qui va du bleu vers le violet */
+  background: linear-gradient(135deg, #e0e634, #EC6EA6);
+  /* Pour que le dégradé couvre toute la hauteur de l'écran */
+  height: 100vh;
+  margin: 0;
+}
+.container0{
+    margin-top: 40px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-style: solid;
+    border-width: 4px;
+    border-color:blueviolet;
+    border-radius: 20px;
+    padding: 30px;
+}
+.container4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-style: solid;
+    border-width: 4px;
+    border-color:blueviolet;
+    border-radius: 20px;
+    padding: 30px;
+}
+.container1{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+   
+
+.container2{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+}
+
+.container3{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+}
+
+/* Chaque bloc graduation + numéro */
+.container1 .graduation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color :blue ;
+  width: 0; /* Évite que les blocs prennent de la place en largeur */
+}
+.container2 .graduation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 0; /* Évite que les blocs prennent de la place en largeur */
+}
+.container3 .graduation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color:red ;
+  width: 0; /* Évite que les blocs prennent de la place en largeur */
+}
+
+.mouton {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    left: -100px;
+    font-size: 50px;
+    transform: scale(-1,1);
+    animation: traverser 5s linear infinite;
+  }
+  @keyframes traverser {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: 105%;
+    }
+  }
